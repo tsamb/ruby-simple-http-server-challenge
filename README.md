@@ -9,7 +9,9 @@ The server is the most important piece here. It should be able to respond to dif
 Bonus points for:
 
 1. Creating a client that acts similarly to the unix utility `curl`. That is, you could run `ruby client.rb http://localhost:2000/contact` and "You can contact me at the following address.." would print in your terminal via STDOUT (or whatever the body of the response is...)
-2. Creating a DSL in your server akin to Sinatra's routes. That is, you can define GET requests via a method that takes a string as an argument and a block. Something like:
+2. Refactoring your code so that it follows OO best practices and would make Sandi Metz proud.
+3. [Shebanging](https://stackoverflow.com/questions/17447532/what-is-the-use-of-usr-local-bin-ruby-w-at-the-start-of-a-ruby-program) your client and adding it to your path so you can simply type `client http://www.example.com` and your client script will run
+4. Creating a DSL in your server akin to Sinatra's routes. That is, you can define GET requests via a method that takes a string as an argument and a block. Something like:
 ```ruby
 get '/contact' do
   "You can contact me at the following address..." 
