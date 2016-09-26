@@ -8,8 +8,8 @@ class Routes
 
 	end
 
-	def respond
-		route_response = function.call
+	def respond(body = nil)
+		route_response = function.call(body) #calls the block of the route
 		status_code = (defined?(route_response[:status_code])).nil? ? 200 : route_response[:status_code]
 		status_message = (defined?(route_response[:status_message])).nil? ? 'ok' : route_response[:status_message]
 		response_body = (defined?(route_response[:response_body])).nil? ? nil : route_response[:response_body]
